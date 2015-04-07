@@ -6,12 +6,10 @@
 
 swift based animation label view
 
-# How to use
-
-##
+## How to use
 
 1. Create object and add subview
-2. Call  startAnimation() to start animation
+2. Call  `startAnimation()` to start animation
 
 ```swift
 var animationLabel : PMAnimationLabelView = PMAnimationLabelView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100))
@@ -24,9 +22,7 @@ self.view.addSubview(animationLabel)
 animationLabel.startAnimation()
 ```
 
-# Properties
-
-##
+## Properties
 
 ```swift
 var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite　loop animation
