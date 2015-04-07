@@ -11,8 +11,7 @@ import UIKit
 class PMAnimationLabelView: UIView {
 
     //MARK : - Public Property
-
-    var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite　loop animation
+    var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite loop animation
     var text : NSString = ""
     var font : UIFont = UIFont.boldSystemFontOfSize(17)
     var textColor : UIColor = UIColor.blackColor()
