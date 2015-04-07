@@ -38,7 +38,7 @@ class PMAnimationLabelView: UIView {
     //MARK : - Class Method
     func startAnimation(){
         self.reloadView()
-        self.execureAnimation()
+        self.executeAnimation()
     }
 
     func stopAnimation(){
@@ -88,7 +88,7 @@ class PMAnimationLabelView: UIView {
         self.contentView.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2)
     }
 
-    private func execureAnimation(){
+    private func executeAnimation(){
 
         var delayInSeconds : Double = 0.0
         var duration : Double = self.animationDuration
@@ -134,9 +134,9 @@ class PMAnimationLabelView: UIView {
         }
 
         if (self.roopCount <= 0){
-            self.execureAnimation()
+            self.executeAnimation()
         }else if (self.currentRoopCount < self.roopCount){
-            self.execureAnimation()
+            self.executeAnimation()
             self.currentRoopCount++;
         }
     }
