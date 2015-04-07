@@ -10,7 +10,7 @@ import UIKit
 
 class PMAnimationLabelView: UIView {
 
-    //MARK : - Public Property
+    //MARK: - Public Property
     var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite loop animation
     var text : NSString = ""
     var font : UIFont = UIFont.boldSystemFontOfSize(17)
@@ -19,14 +19,14 @@ class PMAnimationLabelView: UIView {
     var animationDuration : Double = 0.2 // Animation time per label
     var animationDelay : Double = 0.1 // Animation difference between label
 
-    //MARK : - Private Property
+    //MARK: - Private Property
     private var contentView : UIView = UIView()
     private var stopAnimationFlag : Bool = false
     private var currentRoopCount : NSInteger = 0
     private var animationIndex : NSInteger = 0
     private var labelArray : Array<UILabel> = Array<UILabel>()
 
-    //MARK : - Initializer
+    //MARK: - Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -35,7 +35,7 @@ class PMAnimationLabelView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    //MARK : - Class Method
+    //MARK: - Class Method
     func startAnimation(){
         self.reloadView()
         self.executeAnimation()
@@ -45,7 +45,7 @@ class PMAnimationLabelView: UIView {
         self.stopAnimationFlag = false
     }
 
-    //MARK : - Private Method
+    //MARK: - Private Method
     private func initializeView(){
         for subView : UILabel in self.labelArray {
             subView.removeFromSuperview()
