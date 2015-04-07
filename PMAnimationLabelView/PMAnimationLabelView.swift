@@ -11,13 +11,14 @@ import UIKit
 class PMAnimationLabelView: UIView {
 
     //MARK : - Public Property
-    var roopCount : NSInteger = 0
+
+    var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite　loop animation
     var text : NSString = ""
     var font : UIFont = UIFont.boldSystemFontOfSize(17)
     var textColor : UIColor = UIColor.blackColor()
-    var animationOffset : CGFloat = 5
-    var animationDuration : Double = 0.2
-    var animationDelay : Double = 0.1
+    var animationOffset : CGFloat = 5 // The amount of movement of the bounce animation (pixels)
+    var animationDuration : Double = 0.2 // Animation time per label
+    var animationDelay : Double = 0.1 // Animation difference between label
 
     //MARK : - Private Property
     private var contentView : UIView = UIView()
@@ -46,7 +47,7 @@ class PMAnimationLabelView: UIView {
     }
 
     //MARK : - Private Method
-    func initializeView(){
+    private func initializeView(){
         for subView : UILabel in self.labelArray {
             subView.removeFromSuperview()
         }
@@ -59,7 +60,7 @@ class PMAnimationLabelView: UIView {
         self.addSubview(contentView)
     }
 
-    func reloadView(){
+    private func reloadView(){
         self.initializeView()
 
         var offsetX : CGFloat = 0
@@ -88,7 +89,7 @@ class PMAnimationLabelView: UIView {
         self.contentView.center = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2)
     }
 
-    func execureAnimation(){
+    private func execureAnimation(){
 
         var delayInSeconds : Double = 0.0
         var duration : Double = self.animationDuration
@@ -127,7 +128,7 @@ class PMAnimationLabelView: UIView {
         }
     }
 
-    func didFinishAnimation(){
+    private func didFinishAnimation(){
 
         if (self.stopAnimationFlag == true) {
             return
