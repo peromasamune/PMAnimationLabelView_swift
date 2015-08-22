@@ -18,6 +18,7 @@ class PMAnimationLabelView: UIView {
     var animationOffset : CGFloat = 5 // The amount of movement of the bounce animation (pixels)
     var animationDuration : Double = 0.2 // Animation time per label
     var animationDelay : Double = 0.1 // Animation difference between label
+    var labelOffset : CGFloat = 1
 
     //MARK: - Private Property
     private var contentView : UIView = UIView()
@@ -78,7 +79,7 @@ class PMAnimationLabelView: UIView {
             self.contentView.addSubview(label)
             self.labelArray.append(label)
 
-            offsetX += label.frame.size.width + 1
+            offsetX += label.frame.size.width + labelOffset
             if (labelHeight < CGRectGetHeight(label.frame)) {
                 labelHeight = CGRectGetHeight(label.frame)
             }
