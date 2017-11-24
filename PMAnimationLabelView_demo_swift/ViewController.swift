@@ -12,14 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = .white
 
-        var animationLabel : PMAnimationLabelView = PMAnimationLabelView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100))
+        let animationLabel = PMAnimationLabelView(frame: CGRect(x:0, y:0, width:self.view.frame.width, height:100))
         animationLabel.text = "Loading..."
-        animationLabel.font = UIFont.boldSystemFontOfSize(40)
-        animationLabel.center = CGPointMake(CGRectGetWidth(self.view.frame) / 2, CGRectGetHeight(self.view.frame) / 2)
+        animationLabel.font = UIFont.boldSystemFont(ofSize:40)
+        animationLabel.center = CGPoint(x:self.view.frame.width / 2, y:self.view.frame.height / 2)
 
         self.view.addSubview(animationLabel)
 
@@ -28,9 +27,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 
