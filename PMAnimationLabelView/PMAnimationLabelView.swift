@@ -8,17 +8,17 @@
 
 import UIKit
 
-class PMAnimationLabelView: UIView {
+public class PMAnimationLabelView: UIView {
 
     //MARK: - Public Property
-    var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite loop animation
-    var text : NSString = ""
-    var font : UIFont = UIFont.boldSystemFont(ofSize:17)
-    var textColor : UIColor = .black
-    var animationOffset : CGFloat = 5 // The amount of movement of the bounce animation (pixels)
-    var animationDuration : Double = 0.2 // Animation time per label
-    var animationDelay : Double = 0.1 // Animation difference between label
-    var labelOffset : CGFloat = 1
+    public var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite loop animation
+    public var text : NSString = ""
+    public var font : UIFont = UIFont.boldSystemFont(ofSize:17)
+    public var textColor : UIColor = .black
+    public var animationOffset : CGFloat = 5 // The amount of movement of the bounce animation (pixels)
+    public var animationDuration : Double = 0.2 // Animation time per label
+    public var animationDelay : Double = 0.1 // Animation difference between label
+    public var labelOffset : CGFloat = 1
 
     //MARK: - Private Property
     private var contentView : UIView = UIView()
@@ -28,21 +28,21 @@ class PMAnimationLabelView: UIView {
     private var labelArray : Array<UILabel> = Array<UILabel>()
 
     //MARK: - Initializer
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     //MARK: - Class Method
-    func startAnimation(){
+    public func startAnimation(){
         self.reloadView()
         self.executeAnimation()
     }
 
-    func stopAnimation(){
+    public func stopAnimation(){
         self.stopAnimationFlag = false
     }
 
@@ -134,5 +134,4 @@ class PMAnimationLabelView: UIView {
             self.currentRoopCount = self.currentRoopCount + 1
         }
     }
-
 }
