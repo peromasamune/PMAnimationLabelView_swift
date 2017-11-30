@@ -12,7 +12,7 @@ public class PMAnimationLabelView: UIView {
 
     //MARK: - Public Property
     public var roopCount : NSInteger = 0 //Number of animation loop. Set 0 to infinite loop animation
-    public var text : NSString = ""
+    public var text : String = ""
     public var font : UIFont = UIFont.boldSystemFont(ofSize:17)
     public var textColor : UIColor = .black
     public var animationOffset : CGFloat = 5 // The amount of movement of the bounce animation (pixels)
@@ -66,8 +66,10 @@ public class PMAnimationLabelView: UIView {
         var offsetX : CGFloat = 0
         var labelHeight : CGFloat = 0
 
-        for i in 0..<text.length {
-            let unitString = text.substring(with: NSMakeRange(i, 1))
+        for i in 0..<text.count {
+            let startIndex = text.index(text.startIndex, offsetBy: i)
+            let endIndex = text.index(text.startIndex, offsetBy: i+1)
+            let unitString = String(text[startIndex..<endIndex])
             
             let label = UILabel(frame: CGRect(x:offsetX, y:0, width:10, height:10))
             label.backgroundColor = .clear

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'PMAnimationLabelView_swift'
-  s.version  = '1.0.2'
+  s.version  = '1.0.3'
   s.license  = 'MIT'
   s.summary  = 'swift based animation label view'
   s.homepage = 'https://github.com/peromasamune/PMAnimationLabelView_swift'
